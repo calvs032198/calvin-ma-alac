@@ -13,6 +13,7 @@ type logoType = {
 export const images = {
     profile: '../../src/assets/images/profile.jpg',
     toga: '../../src/assets/images/toga.jpg',
+    hooli:'../assets/images/hooli.jpeg',
     logo: {
         mySql: '../../src/assets/images/mysql-logo.png',
         js: '../../src/assets/images/js-logo.png',
@@ -29,3 +30,6 @@ export const images = {
 export const logoAsArray = Object.keys(images.logo).map(
     (item) => images.logo[item as keyof logoType]
 )
+export const docs = {
+    resume: '../../public/cv_calvs.pdf',
+}

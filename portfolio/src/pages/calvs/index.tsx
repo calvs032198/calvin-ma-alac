@@ -6,7 +6,7 @@ const CalvinPortfolio: React.FunctionComponent = () => {
     return (
         <div className='flex w-full'>
             <TitleGenerator title='Calvin Mañalac' />
-            <div className='min-h-screen p-5 flex flex-col w-full m-5'>
+            <div className='min-h-screen p-5 flex flex-col mx-auto m-5'>
                 <Outlet />
             </div>
         </div>

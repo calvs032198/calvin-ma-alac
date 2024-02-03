@@ -9,6 +9,10 @@ module.exports = {
         './src/**/*.{ts,tsx}',
     ],
     theme: {
+        fontSize: {
+            title: '3.2rem',
+            descriptiom:'16px'
+        },
         fontFamily: {
             sans: ['Inter, Regular', 'Arial', 'sans-serif'],
             'sans-pro': ['Source Sans Pro', 'sans-serif'],
