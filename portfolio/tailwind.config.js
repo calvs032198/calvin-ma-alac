@@ -41,14 +41,11 @@ module.exports = {
                     DEFAULT: 'hsl(var(--primary))',
                     foreground: 'hsl(var(--primary-foreground))',
                 },
-                zentive: {
-                    blue: '#254284',
-                    green: {
-                        dark: '#3B671A',
-                        light: '#F6FFEF',
-                        medium: '#80A91D',
-                    },
-                    red: '#C0392B',
+                main: {
+                    tg: '#175873',
+                    teal: '#2B7C85',
+                    sea: '#87ACA3',
+                    royal: '#0C1446',
                 },
                 secondary: {
                     DEFAULT: 'hsl(var(--secondary))',

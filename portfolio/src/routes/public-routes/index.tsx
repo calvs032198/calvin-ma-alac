@@ -1,7 +1,9 @@
 import { Navigate, RouteObject } from 'react-router-dom'
-import AppLayout from '../../components/layout'
-import CalvinPortfolio from '../../pages/calvs'
+import AppLayout from '../../components/Layout'
+import CalvinPortfolio from '../../pages/Calvs'
 import TriciaUmaliPortfolio from '../../pages/trish'
+import Home from '../../pages/Calvs/Home'
+import RecentWorks from '../../pages/Calvs/Recent-Work'
 
 const PublicRoutes: RouteObject[] = [
     {
@@ -9,11 +11,35 @@ const PublicRoutes: RouteObject[] = [
         children: [
             {
                 path: '/',
+                errorElement: <>Error</>,
+                element: <Navigate to='/calvin-manalac' replace />,
+            },
+
+            {
+                path: '',
                 element: <Navigate to='/calvin-manalac' replace />,
             },
             {
                 path: '/calvin-manalac',
                 element: <CalvinPortfolio />,
+                children: [
+                    {
+                        path: '',
+                        element: <Home />,
+                    },
+                    {
+                        path: 'recent-work',
+                        element: <RecentWorks />,
+                    },
+                    {
+                        path: '*',
+                        element: <>Error</>,
+                    },
+                    {
+                        path: 'error',
+                        element: <>Error</>,
+                    },
+                ],
             },
             {
                 path: '/tricia-umali',
