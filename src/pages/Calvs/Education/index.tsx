@@ -3,8 +3,6 @@ import AppTitle from '../../../components/App-tittle'
 import * as React from 'react'
 import { images } from '../../../constants'
 
-interface IEducationProps {}
-
 const Educations = [
     {
         title: 'Bachelor of Science in Information Technology',
@@ -28,7 +26,7 @@ const Educations = [
     },
 ]
 
-const Education: React.FunctionComponent<IEducationProps> = (props) => {
+const Education: React.FunctionComponent = () => {
     return (
         <div className='w-full h-full flex flex-col'>
             <AppTitle icon={<MdCastForEducation />} title='Education' />

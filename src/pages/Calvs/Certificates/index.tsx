@@ -4,7 +4,7 @@ import * as React from 'react'
 import { IoDocumentsOutline } from 'react-icons/io5'
 import CertCard from './Items'
 
-interface ICertificatesProps {}
+
 const certificates = [
     {
         title: `President's List`,
@@ -68,7 +68,7 @@ const certificates = [
     },
 ]
 
-const Certificates: React.FunctionComponent<ICertificatesProps> = (props) => {
+const Certificates: React.FunctionComponent = () => {
     return (
         <div className='w-full h-full flex flex-col gap-5'>
             <AppTitle

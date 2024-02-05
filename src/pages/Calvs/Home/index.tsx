@@ -8,9 +8,9 @@ import { CgProfile } from 'react-icons/cg'
 import AppTitle from '../../../components/App-tittle'
 import { TechnicalSkills } from './skills'
 
-interface IHomeProps {}
 
-const Home: React.FunctionComponent<IHomeProps> = (props) => {
+
+const Home: React.FunctionComponent = () => {
     const [showResume, setshowResume] = React.useState(false)
     return (
         <div className='h-full w-full flex flex-col'>

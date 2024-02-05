@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 import { AppModal } from '../../../components/App-modal'
 import { docs } from '../../../constants'
 
-interface IFooterProps {}
 
-const Footer: React.FunctionComponent<IFooterProps> = (props) => {
+
+const Footer: React.FunctionComponent= () => {
     const mainLocation = location.pathname.split('/')[1]
     const [showResume, setShowResume] = React.useState(false)
     const socials = [

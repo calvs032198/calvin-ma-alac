@@ -11,11 +11,10 @@ interface props {
 }
 
 const LogoGalleryCarousel: FC<props> = (props) => {
-    const { array, duration, autoScroll, buttons, isHome } = props
+    const { array, autoScroll, isHome } = props
     const [active, setActive] = useState(0)
     const [screenWidth, setScreenWidth] = useState<number>(0)
     let timeoutId: ReturnType<typeof setTimeout>
-    let [isShowing, setIsShowing] = useState<boolean>(false)
 
     const slidesToShow: number = useMemo(() => {
         if (array.length > 0) {
@@ -43,6 +42,7 @@ const LogoGalleryCarousel: FC<props> = (props) => {
         swipe: false,
         centerMode: true,
         beforeChange: (oldInd: number, newIndex: number) => {
+            console.log(oldInd)
             setActive(newIndex)
         },
         focusOnSelect: false,
@@ -64,7 +64,7 @@ const LogoGalleryCarousel: FC<props> = (props) => {
         }
     }, [active, array])
 
-    const ArrowPrev: FC<any> = ({ className, style, onClick }) => (
+    const ArrowPrev: FC<any> = ({ onClick }) => (
         <button
             tabIndex={0}
             role='button'
@@ -76,7 +76,7 @@ const LogoGalleryCarousel: FC<props> = (props) => {
             <h1>{'<'}</h1>
         </button>
     )
-    const ArrowNext: FC<any> = ({ className, style, onClick }) => (
+    const ArrowNext: FC<any> = ({ onClick }) => (
         <button
             tabIndex={0}
             role='button'

@@ -4,9 +4,9 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import links from '../links'
 import { Link, useLocation } from 'react-router-dom'
 
-interface ISideBarProps {}
 
-const SideBar: React.FunctionComponent<ISideBarProps> = (props) => {
+
+const SideBar: React.FunctionComponent = () => {
     const location = useLocation()
     const mainLocation = location.pathname.split('/')[1]
     const [showMenuBar, setShowMenuBar] = React.useState(false)
