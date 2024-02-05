@@ -16,7 +16,6 @@ const PublicRoutes: RouteObject[] = [
                 errorElement: <>Error</>,
                 element: <Navigate to='/calvin-manalac' replace />,
             },
-
             {
                 path: '',
                 element: <Navigate to='/calvin-manalac' replace />,
@@ -58,6 +57,16 @@ const PublicRoutes: RouteObject[] = [
             {
                 path: '/tricia-umali',
                 element: <TriciaUmaliPortfolio />,
+            },
+            {
+                path: 'error',
+                errorElement: <>Error</>,
+                element: <Navigate to='/calvin-manalac' replace />,
+            },
+            {
+                path: '*',
+                errorElement: <>Error</>,
+                element: <Navigate to='/calvin-manalac' replace />,
             },
         ],
     },
