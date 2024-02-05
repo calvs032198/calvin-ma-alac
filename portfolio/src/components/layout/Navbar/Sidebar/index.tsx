@@ -31,6 +31,7 @@ const SideBar: React.FunctionComponent<ISideBarProps> = (props) => {
                 <div className='flex flex-col bg-main-tg py-2 text-white px-8 sticky justify-center items-center'>
                     {links.map((links, index) => (
                         <Link
+                            key={index}
                             data-aos='fade-up'
                             data-aos-delay={100 * (index + 1)}
                             className='p-5 hover:opacity-80 transition-all'

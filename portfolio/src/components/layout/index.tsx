@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Outlet } from 'react-router-dom'
-import NavBar from './navbar'
-import Footer from './footer'
+import NavBar from './Navbar'
+import Footer from './Footer'
 import ScrollToTop from '../Scroll-to-top'
 
 const AppLayout: React.FunctionComponent = () => {

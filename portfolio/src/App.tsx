@@ -3,6 +3,7 @@ import './App.css'
 import Routes from './routes'
 import { useEffect } from 'react'
 import AOS from 'aos'
+// aos
 import 'aos/dist/aos.css'
 
 function App() {

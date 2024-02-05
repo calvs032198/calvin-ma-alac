@@ -48,6 +48,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
                     <a
                         href={item.url}
                         data-aos='fade-up'
+                        key={index}
                         data-aos-delay={(index + 1) * 100}
                         target='_blank'
                         className='p-3 border border-main-sea fill-main-sea hover:opacity-90'

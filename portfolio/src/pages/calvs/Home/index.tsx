@@ -3,6 +3,7 @@ import AppButton from '../../../components/App-button'
 import * as React from 'react'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import { AppModal } from '../../../components/App-modal'
+import LogoGallery from './LogoGallery'
 
 interface IHomeProps {}
 
@@ -42,26 +43,28 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                         data-aos='fade-left'
                         src={images.profile}
                         alt=''
-                        className='rounded-full object-contain max-w-[30rem]'
+                        className='rounded-full object-contain md:max-w-[30rem]'
                     />
                 </div>
             </div>
             <div className='flex flex-col min-w-full'>
-                <h3 data-aos='fade' className='font-bold'>
+                <h3 data-aos='fade' className='font-bold w-full'>
                     I have expertise in:
                 </h3>
-                <div className='flex flex-wrap justify-center items-center'>
-                    {logoAsArray.map((item, index) => (
-                        <img
-                            data-aos='fade-up'
-                            data-aos-delay={(index + 1) * 100}
-                            src={item}
-                            className='h-[3.6rem] m-5'
-                        />
-                    ))}
+                <div className='flex w-full h-full'>
+                    <LogoGallery
+                        autoScroll
+                        duration={2000}
+                        isHome
+                        array={logoAsArray}
+                    />
                 </div>
             </div>
-            <AppModal closeIcon isOpen={showResume} onClose={() => setshowResume(false)}>
+            <AppModal
+                closeIcon
+                isOpen={showResume}
+                onClose={() => setshowResume(false)}
+            >
                 <iframe src={docs.resume} className='h-screen w-full' />
             </AppModal>
         </div>
