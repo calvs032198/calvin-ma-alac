@@ -7,9 +7,6 @@ import { twMerge } from 'tailwind-merge'
 const NavBar: React.FunctionComponent = () => {
     const location = useLocation()
     const mainLocation = location.pathname.split('/')[1]
-    const secondLocation = location.pathname.split('/')[2]
-
-    const isHome = React.useMemo(() => !!secondLocation, [secondLocation])
 
     return (
         <>
@@ -18,7 +15,8 @@ const NavBar: React.FunctionComponent = () => {
                     <Link
                         key={index}
                         className={twMerge(
-                            'p-5 hover:opacity-80 transition-all hover:font-bold font-medium'
+                            'py-5 px-12 hover:opacity-80 transition-all hover:font-bold font-medium',
+                            location.pathname.includes(links.url) && 'font-extrabold'
                         )}
                         to={`${mainLocation}${links.url}`}
                     >

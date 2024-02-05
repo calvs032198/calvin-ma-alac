@@ -1,7 +1,7 @@
 export default [
     {
         label: 'Who am I?',
-        url: '',
+        url: '/about',
     },
     {
         label: 'Recent Work',
@@ -15,8 +15,8 @@ export default [
         label: 'Education',
         url: '/education',
     },
-    {
-        label: 'Get in touch',
-        url: '/socials',
-    },
+    // {
+    //     label: 'Get in touch',
+    //     url: '/socials',
+    // },
 ]

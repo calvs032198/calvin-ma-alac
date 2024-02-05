@@ -6,6 +6,7 @@ import { AppModal } from '../../../components/App-modal'
 import LogoGallery from './LogoGallery'
 import { CgProfile } from 'react-icons/cg'
 import AppTitle from '../../../components/App-tittle'
+import { TechnicalSkills } from './skills'
 
 interface IHomeProps {}
 
@@ -44,7 +45,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                     />
                 </div>
             </div>
-            <div className='flex flex-col min-w-full'>
+            <div className='flex flex-col min-w-full border-y border-main-teal'>
                 <h3 data-aos='fade' className='font-bold w-full'>
                     I have expertise in:
                 </h3>
@@ -56,6 +57,29 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                         array={logoAsArray}
                     />
                 </div>
+            </div>
+            <div className='flex flex-col mx-auto p-5 w-full'>
+                {TechnicalSkills.map((item) => (
+                    <div className='flex flex-col gap-7'>
+                        <h1 className='uppercase font-bold text-[23px]'>
+                            {item.title}
+                        </h1>
+                        <ul className='gap-5 text-[19px] font-semibold flex flex-wrap justify-center'>
+                            {item.items.map((item) => (
+                                <li className='w-full md:max-w-[13rem] bg-white divide-y-2 text-center shadow-2xl opacity-80 p-2 rounded-md hover:scale-105 transition-all'>
+                                    <h1 className='text-[21px]'>{item.title}</h1>
+                                    <ul className='indent-2'>
+                                        {item.skills.map((skills) => (
+                                            <li className='text-[16px]'>
+                                                {skills}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
             <AppModal
                 closeIcon

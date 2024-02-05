@@ -27,6 +27,10 @@ const PublicRoutes: RouteObject[] = [
                 children: [
                     {
                         path: '',
+                        element: <Navigate to='about' replace />,
+                    },
+                    {
+                        path: 'about',
                         element: <Home />,
                     },
                     {

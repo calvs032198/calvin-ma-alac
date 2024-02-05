@@ -90,7 +90,7 @@ const LogoGalleryCarousel: FC<props> = (props) => {
     )
 
     return (
-        <div className='my-5 relative min-h-[350px] w-screen border-y border-main-teal'>
+        <div className='my-5 relative min-h-[350px] w-screen'>
             <Slider
                 {...settings}
                 nextArrow={<ArrowNext />}

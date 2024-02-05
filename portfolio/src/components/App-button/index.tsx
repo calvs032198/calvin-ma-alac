@@ -14,8 +14,8 @@ const AppButton: React.FunctionComponent<IAppButtonProps> = (props) => {
             className={twMerge(
                 variant === 'primary'
                     ? 'bg-main-tg text-white hover:bg-teal-700'
-                    : 'text-main-tg bg-white hover:bg-gray-400',
-                'px-5 py-2 hover:opacity-30 font-semibold transition-all',
+                    : 'text-main-tg bg-white hover:bg-gray-400 hover:text-gray-950',
+                'px-5 py-2 hover:opacity-75 font-semibold transition-all',
                 className
             )}
         >
