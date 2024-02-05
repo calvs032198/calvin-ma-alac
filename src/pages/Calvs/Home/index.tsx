@@ -4,7 +4,6 @@ import * as React from 'react'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import { AppModal } from '../../../components/App-modal'
 import LogoGallery from './LogoGallery'
-import { CgProfile } from 'react-icons/cg'
 import AppTitle from '../../../components/App-tittle'
 import { TechnicalSkills } from './skills'
 
