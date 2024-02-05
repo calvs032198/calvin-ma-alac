@@ -1,4 +1,9 @@
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import {
+    FaFacebook,
+    FaInstagram,
+    FaLinkedin,
+    FaPhoneVolume,
+} from 'react-icons/fa'
 import * as React from 'react'
 import { SiGmail } from 'react-icons/si'
 import AppButton from '../../../components/App-button'
@@ -6,10 +11,10 @@ import links from '../Navbar/links'
 import { Link } from 'react-router-dom'
 import { AppModal } from '../../../components/App-modal'
 import { docs } from '../../../constants'
+import { IoMailOutline } from 'react-icons/io5'
+import { MdLocationPin } from 'react-icons/md'
 
-
-
-const Footer: React.FunctionComponent= () => {
+const Footer: React.FunctionComponent = () => {
     const mainLocation = location.pathname.split('/')[1]
     const [showResume, setShowResume] = React.useState(false)
     const socials = [
@@ -60,7 +65,25 @@ const Footer: React.FunctionComponent= () => {
                     >
                         Resume
                     </AppButton>
-                    <div className='flex flex-col text-center'>
+                    <div className='flex flex-col mr-auto'>
+                        <ul className='flex flex-col justify-start items-start'>
+                            <li className='inline-flex gap-2 justify-center items-center'>
+                                <FaPhoneVolume />
+                                <span>0955-481-6948</span>
+                            </li>
+                            <li className='inline-flex gap-2 justify-center items-center'>
+                                <IoMailOutline />
+                                <a href='mailto:calvinmanalac21@gmail.com' target='_blank' >calvinmanalac21@gmail.com</a>
+                            </li>
+                            <li className='inline-flex gap-2 justify-center items-center'>
+                                <MdLocationPin />
+                                <span>
+                                    349 Dalan Bayu, San Matias, Guagua, Pampanga
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className=' flex-col text-center hidden'>
                         <h1 className='text-[18px] px-8 border-b mb-4 font-bold'>
                             About Me
                         </h1>
