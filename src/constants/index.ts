@@ -12,6 +12,7 @@ import typeScript from '../../src/assets/images/typescript.png'
 import spring from '../../src/assets/images/spring-logo.png'
 import tailwind from '../assets/images/tailwind-logo.png'
 import node from '../../src/assets/images/node-logo.png'
+import calvsLogo from '../../src/assets/images/calvin-logo.png'
 
 import resume from '../../public/cv_calvs.pdf'
 import bit from '../../public/js-bit.png'
@@ -39,6 +40,7 @@ type logoType = {
 }
 export const images = {
     profile,
+    calvsLogo,
     toga,
     hooli,
     rp,

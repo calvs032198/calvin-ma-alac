@@ -8,15 +8,16 @@ import { CgProfile } from 'react-icons/cg'
 import AppTitle from '../../../components/App-tittle'
 import { TechnicalSkills } from './skills'
 
-
-
 const Home: React.FunctionComponent = () => {
     const [showResume, setshowResume] = React.useState(false)
     return (
         <div className='h-full w-full flex flex-col'>
             <div className='mx-auto p-5 h-full max-w-md flex flex-col gap-5 md:flex-row justify-center items-center'>
                 <div className='flex flex-col lg:min-w-[538px] gap-5'>
-                    <AppTitle icon={<CgProfile />} title='Calvin Mañalac' />
+                    <AppTitle
+                        icon={<img src={images.calvsLogo} className='h-12 w-12 object-cover' />}
+                        title='Calvin Mañalac'
+                    />
                     <p
                         data-aos='fade-up'
                         className='text-justify italic font-medium border-t text-descriptiom'
@@ -67,7 +68,9 @@ const Home: React.FunctionComponent = () => {
                         <ul className='gap-5 text-[19px] font-semibold flex flex-wrap justify-center'>
                             {item.items.map((item) => (
                                 <li className='w-full md:max-w-[13rem] bg-white divide-y-2 text-center shadow-2xl opacity-80 p-2 rounded-md hover:scale-105 transition-all'>
-                                    <h1 className='text-[21px]'>{item.title}</h1>
+                                    <h1 className='text-[21px]'>
+                                        {item.title}
+                                    </h1>
                                     <ul className='indent-2'>
                                         {item.skills.map((skills) => (
                                             <li className='text-[16px]'>
