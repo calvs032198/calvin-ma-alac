@@ -6,7 +6,7 @@ import ScrollToTop from '../Scroll-to-top'
 
 const AppLayout: React.FunctionComponent = () => {
     return (
-        <div className='bg-main-royal min-h-screen flex flex-col w-full text-white'>
+        <div className='text-main-royal min-h-screen flex flex-col w-full bg-main-sea overflow-hidden'>
             <ScrollToTop />
             <NavBar />
             <div className='w-full flex justify-center items-center'>

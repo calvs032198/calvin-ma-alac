@@ -4,6 +4,8 @@ import CalvinPortfolio from '../../pages/Calvs'
 import TriciaUmaliPortfolio from '../../pages/trish'
 import Home from '../../pages/Calvs/Home'
 import RecentWorks from '../../pages/Calvs/Recent-Work'
+import Certificates from '../../pages/Calvs/Certificates'
+import Education from '../../pages/Calvs/Education'
 
 const PublicRoutes: RouteObject[] = [
     {
@@ -30,6 +32,14 @@ const PublicRoutes: RouteObject[] = [
                     {
                         path: 'recent-work',
                         element: <RecentWorks />,
+                    },
+                    {
+                        path: 'certs',
+                        element: <Certificates />,
+                    },
+                    {
+                        path: 'education',
+                        element: <Education />,
                     },
                     {
                         path: '*',

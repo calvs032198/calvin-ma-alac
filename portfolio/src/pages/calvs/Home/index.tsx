@@ -4,6 +4,8 @@ import * as React from 'react'
 import '@react-pdf-viewer/core/lib/styles/index.css'
 import { AppModal } from '../../../components/App-modal'
 import LogoGallery from './LogoGallery'
+import { CgProfile } from 'react-icons/cg'
+import AppTitle from '../../../components/App-tittle'
 
 interface IHomeProps {}
 
@@ -13,12 +15,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
         <div className='h-full w-full flex flex-col'>
             <div className='mx-auto p-5 h-full max-w-md flex flex-col gap-5 md:flex-row justify-center items-center'>
                 <div className='flex flex-col lg:min-w-[538px] gap-5'>
-                    <h1
-                        data-aos='fade-right'
-                        className=' font-bold text-[24px] transition-all md:text-[3.2rem] max-w-[400px] uppercase'
-                    >
-                        Calvin Mañalac
-                    </h1>
+                    <AppTitle icon={<CgProfile />} title='Calvin Mañalac' />
                     <p
                         data-aos='fade-up'
                         className='text-justify italic font-medium border-t text-descriptiom'
@@ -43,7 +40,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
                         data-aos='fade-left'
                         src={images.profile}
                         alt=''
-                        className='rounded-full object-contain md:max-w-[30rem]'
+                        className='rounded-full object-contain md:max-w-[30rem] shadow-lg'
                     />
                 </div>
             </div>

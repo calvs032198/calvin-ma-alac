@@ -11,7 +11,7 @@ module.exports = {
     theme: {
         fontSize: {
             title: '3.2rem',
-            descriptiom:'16px'
+            description:'16px'
         },
         fontFamily: {
             sans: ['Inter, Regular', 'Arial', 'sans-serif'],
